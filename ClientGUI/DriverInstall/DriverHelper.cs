@@ -1,31 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using static PInvoke.SetupApi;
+using static SysDVRClientGUI.Logic.Constants;
 
 namespace SysDVRClientGUI.DriverInstall
 {
-    public enum DriverStatus {
+    public enum DriverStatus
+    {
         Unknown,
         NotInstalled,
         Installed
     }
 
-    internal static class DriverHelper
+    internal static partial class DriverHelper
     {
-        [DllImport("shell32.dll", SetLastError = true)]
+        [LibraryImport("shell32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool IsUserAnAdmin();
+        private static partial bool IsUserAnAdmin();
 
         private static unsafe string DriverInfoToString(SP_DRVINFO_DATA data)
         {
@@ -57,19 +55,19 @@ namespace SysDVRClientGUI.DriverInstall
             }
 
             var drvdata = SP_DRVINFO_DATA.Create();
-            string drvInfo = "";
+            StringBuilder drvInfo = new();
             uint i = 0;
             while (SetupDiEnumDriverInfo(hdevInfo, devinfo, DriverType.SPDIT_COMPATDRIVER, i++, ref drvdata))
             {
-                drvInfo += DriverInfoToString(drvdata) + "\r\n\r\n";
+                drvInfo.Append(DriverInfoToString(drvdata) + "\r\n\r\n");
             }
-            
-             Trace.WriteLine($"Current SysDVR driver: {drvInfo}");
 
-             return drvInfo.ToLower().Contains("android") ? DriverStatus.Installed : DriverStatus.NotInstalled;
+            Trace.WriteLine($"Current SysDVR driver: {drvInfo}");
+
+            return drvInfo.ToString().ToLower().Contains("android") ? DriverStatus.Installed : DriverStatus.NotInstalled;
         }
 
-        public static async Task DownloadDriver() 
+        public static async Task DownloadDriver()
         {
             if (Directory.Exists("usb_driver_r13-windows"))
             {
@@ -82,31 +80,30 @@ namespace SysDVRClientGUI.DriverInstall
             byte[] driver, hash;
 
             using (var cli = new HttpClient())
-                driver = await cli.GetByteArrayAsync("https://dl.google.com/android/repository/usb_driver_r13-windows.zip");
+                driver = await cli.GetByteArrayAsync(USB_DRIVER_DOWNLOAD_URL);
 
-            using (var sha = SHA256.Create())
-                hash = sha.ComputeHash(driver);
+            hash = SHA256.HashData(driver);
 
             var str = BitConverter.ToString(hash).Replace("-", "").ToLower();
 
             var expected = "360b01d3dfb6c41621a3a64ae570dfac2c9a40cca1b5a1f136ae90d02f5e9e0b";
             if (str != expected)
             {
-                throw new Exception($"The downloaded driver hash doesn't match, try again or open an issue on GitHub.");
+                throw new FileNotFoundException($"The downloaded driver hash doesn't match, try again or open an issue on GitHub.");
             }
 
             File.WriteAllBytes("usb_driver_r13-windows.zip", driver);
-            
+
             ZipFile.ExtractToDirectory("usb_driver_r13-windows.zip", "usb_driver_r13-windows");
             File.Delete("usb_driver_r13-windows.zip");
 
             if (!File.Exists("usb_driver_r13-windows\\usb_driver\\android_winusb.inf"))
             {
-                throw new Exception($"The downloaded archive doesn't contain all the needed files.");
+                throw new FileNotFoundException($"The downloaded archive doesn't contain all the needed files.");
             }
         }
 
-        public static void DeleteTempDir() 
+        public static void DeleteTempDir()
         {
             if (Directory.Exists("usb_driver_r13-windows"))
             {

@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
-		<TargetFramework>net4.5.1</TargetFramework>
+		<TargetFramework>net7.0-windows</TargetFramework>
 		<Platforms>AnyCPU</Platforms>
 		<AssemblyName>SysDVR-ClientGUI</AssemblyName>
 		<Description>https://github.com/exelix11/SysDVR</Description>
@@ -10,33 +10,60 @@
 		<Company />
 		<PackageProjectUrl>https://github.com/exelix11/SysDVR</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/exelix11/SysDVR</RepositoryUrl>
-		<Version>5.5.0.6</Version>
+		<Version>5.6</Version>
 		<RootNamespace>SysDVRClientGUI</RootNamespace>
-		<AssemblyVersion>5.5.0.6</AssemblyVersion>
-		<FileVersion>5.5.0.6</FileVersion>
+		<AssemblyVersion>5.6</AssemblyVersion>
+		<FileVersion>5.6</FileVersion>
 		<Configurations>Debug;Release</Configurations>
 		<ApplicationIcon>ClientGUI1.ico</ApplicationIcon>
 		<UseWindowsForms>true</UseWindowsForms>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <Title>SysDVR-Client GUI</Title>
+    <AssemblyTitle>SysDVR-Client GUI</AssemblyTitle>
+    <DefaultLanguage>en-EN</DefaultLanguage>
+    <NeutralLanguage>en</NeutralLanguage>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<Optimize>false</Optimize>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<DebugType>none</DebugType>
 		<DebugSymbols>false</DebugSymbols>
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	  <PackageReference Include="PInvoke.Kernel32" Version="0.7.124" />
 	  <PackageReference Include="PInvoke.SetupApi" Version="0.7.124" />
+	  <PackageReference Include="Serilog" Version="3.0.1" />
+	  <PackageReference Include="Serilog.Sinks.Debug" Version="2.0.0" />
+	  <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
 	  <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
 	  <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
 	  <PackageReference Include="System.Net.Http" Version="4.3.4" />
 	  <PackageReference Include="System.ValueTuple" Version="4.5.0" />
 	  <PackageReference Include="System.Xml.XDocument" Version="4.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Resources\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Resources\Resources.de-DE.resx">
+	    <LastGenOutput>Resources.de-DE.Designer.cs</LastGenOutput>
+	    <Generator>ResXFileCodeGenerator</Generator>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Resources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
 	</ItemGroup>
 </Project>

@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MAIN_NET_WRONG_BIT" xml:space="preserve">
+    <value>It seems you installed 32-bit .NET instead of the 64-bit one, SysDVR-CLient will not work.\r\n\r\nYou can download the 64-bit version from: https://aka.ms/dotnet/6.0/windowsdesktop-runtime-win-x64.exe\r\n\r\nDo you want to open it now ?</value>
+  </data>
+  <data name="MAIN_GRP_STREAMINGSOURCE" xml:space="preserve">
+    <value>Stream source</value>
+  </data>
+  <data name="DOWNLOADING" xml:space="preserve">
+    <value>Downloading</value>
+  </data>
+  <data name="MAIN_GRP_STREAMINGMODE" xml:space="preserve">
+    <value>Stream mode</value>
+  </data>
+  <data name="MAIN_GRP_STREAMCHANNELS" xml:space="preserve">
+    <value>Channels to stream</value>
+  </data>
+  <data name="MAIN_EXIT_APPLICATION" xml:space="preserve">
+    <value>Exit Application</value>
+  </data>
+  <data name="EXIT" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="MAIN_SHOW_ADVANCED_OPTIONS" xml:space="preserve">
+    <value>Show advanced options</value>
+  </data>
+  <data name="DRIVERINSTALL_FAILED" xml:space="preserve">
+    <value>Driver installation failed</value>
+  </data>
+  <data name="MAIN_DRIVER_NOT_FOUND_WARNING" xml:space="preserve">
+    <value>Without installing the driver USB streaming may not work</value>
+  </data>
+  <data name="LAUNCH" xml:space="preserve">
+    <value>Launch</value>
+  </data>
+  <data name="DRIVERINSTALL_FORM_INFOTEXT" xml:space="preserve">
+    <value>This page allows you to install the USB driver.
+Since version 5.5 SysDVR uses the standard Android driver provided by Google.
+
+If you click install this setup will download latest driver provided by Google from the official link and prompt to install it
+This operation requires an internet connection</value>
+  </data>
+  <data name="DRIVERINSTALL_FORM_NOT_DETECTED" xml:space="preserve">
+    <value>It seems Windows has never detected the SysDVR device ID, enable USB mode in SysDVR-Settings and connect your console. Note that USB-C to C cables may not work.</value>
+  </data>
+  <data name="MAIN_REINSTALL_USB" xml:space="preserve">
+    <value>Reinstall USB driver</value>
+  </data>
+  <data name="DRIVERINSTALL_FORM_ERRORMESSAGE" xml:space="preserve">
+    <value>\r\n\r\nRestart this application and try again, if it keeps on happening open an issue on GitHub.\r\nYou can also try following the manual driver installation guide on GitHub</value>
+  </data>
+  <data name="DRIVERINSTALL_EXTRACT_FAILED" xml:space="preserve">
+    <value>Driver download and extraction failed</value>
+  </data>
+  <data name="DRIVERINSTALL_FORM_NOT_INSTALLED" xml:space="preserve">
+    <value>It seems the driver is not installed, you need to install it to use SysDVR.</value>
+  </data>
+  <data name="MAIN_GRP_STREAMINGSOURCE_INFO" xml:space="preserve">
+    <value>Remember to switch to the correct mode with SysDVR-Settings on your console before beginning to stream. If you need help check the guide.</value>
+  </data>
+  <data name="MAIN_NET_NOT_FOUND" xml:space="preserve">
+    <value>.NET doesn't seem to be installed on this pc but it's needed for SysDVR-Client, do you want to open the download page ?\r\n\r\nYou need to download .NET 6 desktop x64 runtime or a more recent version</value>
+  </data>
+  <data name="ERROR" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="BOTH" xml:space="preserve">
+    <value>Both</value>
+  </data>
+  <data name="INSTALL" xml:space="preserve">
+    <value>Install</value>
+  </data>
+  <data name="MAIN_INFOTEXT" xml:space="preserve">
+    <value>This utility will configure the SysDVR-Client command line automatically.
+If you're not sure what to do here check out the guide on GitHub</value>
+  </data>
+  <data name="MAIN_CREATE_QUICKLAUNCH" xml:space="preserve">
+    <value>Create quick launch shortcut</value>
+  </data>
+  <data name="MAIN_NET_OLD" xml:space="preserve">
+    <value>It seems you're running an outdated version of .NET. SysDVR-Client requires .NET 6 runtime or a more recent version. Do you want to open the download page ?</value>
+  </data>
+  <data name="DONE" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="MAIN_INVALID_IP_ADDRESS" xml:space="preserve">
+    <value>Invalid IP address</value>
+  </data>
+  <data name="MAIN_STREAMING_USB_INFO" xml:space="preserve">
+    <value>USB (Will automatically install driver, if needed)</value>
+  </data>
+  <data name="DRIVERINSTALL_FORM_INSTALLED_ALREADY" xml:space="preserve">
+    <value>The correct driver seems to be already installed, you don't need to install it again.</value>
+  </data>
+  <data name="MAIN_GRP_ADVANCEDOPTIONS" xml:space="preserve">
+    <value>Advanced/Debug options</value>
+  </data>
+  <data name="MAIN_DLL_NOT_FOUND" xml:space="preserve">
+    <value>not found, did you extract all the files in the same folder ?</value>
+  </data>
+  <data name="MAIN_LINKLABEL_TEXT" xml:space="preserve">
+    <value>Open the guide</value>
+  </data>
+  <data name="WILL_CLOSE_NOW" xml:space="preserve">
+    <value>will now close</value>
+  </data>
+  <data name="INSTALLING" xml:space="preserve">
+    <value>Installing</value>
+  </data>
+  <data name="MAIN_NET_WARNING" xml:space="preserve">
+    <value>If you don't upgrade the installed version SysDVR may not work.</value>
+  </data>
+  <data name="MAIN_DRIVER_NOT_FOUND" xml:space="preserve">
+    <value>You selected USB streaming but it seems that the SysDVR driver is not installed, do you want to install it now ?</value>
+  </data>
+  <data name="AUDIO" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="MAIN_IP_ADDRESS" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="DRIVERINSTALL_FORM_INSTALLED_ALREADY_INFO" xml:space="preserve">
+    <value>It seems the driver is already installed, unless you face issues, you DON'T need to install it again.</value>
+  </data>
+  <data name="MAIN_STREAMING_TCP_INFO" xml:space="preserve">
+    <value>TCP Bridge (network mode)</value>
+  </data>
+  <data name="VIDEO" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="DRIVER" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="MAIN_DRIVER_WARNING" xml:space="preserve">
+    <value>You selected USB streaming but Windows reports that it has never seen the SysDVR USB device, before continuing try the following:
+1) Open SysDVR settings on your console and select USB mode then click apply.
+   - If the settings app says SysDVR is not running, reboot your console.
+2) Launch a compatible game.
+3) Connect the console to the PC.
+
+If you did everything correctly windows should play the device plugged in sound and possibly show a 'installing device' screen, if that happens click YES on this message box.
+if you don't see anything it is possible that your USB C cable does not support data connections and you should try a different one. USB C to C cables are known to cause issues.
+
+Do you want to try searching for the SysDVR USB device again ?
+Pressing no will try to start streaming regardless but it will probably fail.</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FILESTREAM_CONTROL_INFO" xml:space="preserve">
+    <value>This will save the stream to an mp4 file. Minimal processing is done to the stream: the output file may be big or in a format that is not supported by some players, it's recommended to re-encode it with ffmpeg or another converter once the recording is done.</value>
+  </data>
+  <data name="MAIN_OPTIONS_IGNORE_AUDIOVIDEO_SYNC" xml:space="preserve">
+    <value>Ignore Audio/Video sync</value>
+  </data>
+  <data name="MAIN_OPTIONS_LOG_STATUS" xml:space="preserve">
+    <value>Log status messages</value>
+  </data>
+  <data name="MAIN_OPTIONS_LOG_TRANSFER" xml:space="preserve">
+    <value>Log transfer info</value>
+  </data>
+  <data name="MAIN_OPTIONS_PRINT_LIBUSB_DEBUGINFO" xml:space="preserve">
+    <value>Print LibUsb debug info</value>
+  </data>
+  <data name="MAIN_OPTIONS_PRINT_LIBUSB_WARNINGS" xml:space="preserve">
+    <value>Print LibUsb warnings</value>
+  </data>
+  <data name="MAIN_STREAMOPTIONS_FILE" xml:space="preserve">
+    <value>Save to file</value>
+  </data>
+  <data name="MAIN_STREAMOPTIONS_PLAY" xml:space="preserve">
+    <value>Play with the built-in video player (Recommended)</value>
+  </data>
+  <data name="MAIN_STREAMOPTIONS_PLAY_MVP" xml:space="preserve">
+    <value>Play in mpv with low latency (single channel only)</value>
+  </data>
+  <data name="MAIN_STREAMOPTIONS_PLAY_RTSP" xml:space="preserve">
+    <value>Relay to a different video player via RTSP -- This is not the RTSP option in SysDVR-settings, read the guide if unsure</value>
+  </data>
+  <data name="MPVSTREAM_DOWNLOAD" xml:space="preserve">
+    <value>Download mpv from the official site</value>
+  </data>
+  <data name="MPVSTREAM_INFO" xml:space="preserve">
+    <value>To stream via mpv you must provide the path of its main executable (called mpv.com for windows)</value>
+  </data>
+  <data name="OPTIONS" xml:space="preserve">
+    <value>options</value>
+  </data>
+  <data name="PATH" xml:space="preserve">
+    <value>Path</value>
+  </data>
+  <data name="PLAYSTREAM_SCALING" xml:space="preserve">
+    <value>Use anisotropic filtering for scaling (direct3d renderer only)</value>
+  </data>
+  <data name="PLAYSTREAM_USEACC" xml:space="preserve">
+    <value>Use hardware acceleration for decoding (not recommended as auto detection may fail, it's better to use the --decoder option from cmd)</value>
+  </data>
+  <data name="RTSPSTREAM_INFO" xml:space="preserve">
+    <value>To connect to the RTSP stream open a video player (mpv is recommended) and connect to rtsp://127.0.0.1:6666/ (this is the fixed address of your pc, you don't need to change it)</value>
+  </data>
+  <data name="RTSPSTREAM_LAUNCHINFO" xml:space="preserve">
+    <value>Launch the stream automatically ? Select Mpv's main executable (Optional)</value>
+  </data>
+  <data name="RTSPSTREAM_LOWLAT" xml:space="preserve">
+    <value>RTSP low-latency mode</value>
+  </data>
+  <data name="RTSPSTREAM_UNTIMED" xml:space="preserve">
+    <value>Do not wait for synchronization (--untimed)</value>
+  </data>
+</root>
